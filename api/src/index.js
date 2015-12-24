@@ -28,7 +28,9 @@ const RiotAPI = require('controllers/riot')(config.riot.base_url, config.riot.ap
 RiotAPI.Summoners.getOneByName('maxdeviant').then((summoner) => {
     console.log(summoner)
 
-    // return RiotAPI.Teams.
+    return RiotAPI.Teams.listBySummoner(summoner.id);
+}).then((teams) => {
+    console.log(teams)
 }).catch((err) => {
     console.log(err);
 });
