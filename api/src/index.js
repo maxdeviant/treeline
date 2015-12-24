@@ -24,6 +24,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/', require('routes/health'));
+app.use('/', require('routes/summoners'));
 
 app.set('host', process.env.HOST || '0.0.0.0');
 app.set('port', process.env.PORT || 3000);

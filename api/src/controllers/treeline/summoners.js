@@ -33,8 +33,8 @@ class SummonersController extends Controller {
 
     listAll() {
         return new Promise((resolve, reject) => {
-            Summoner.findAll().then((teams) => {
-                return resolve(teams);
+            Summoner.findAll().then((summoners) => {
+                return resolve(summoners);
             }).catch((err) => {
                 return reject(err);
             })
