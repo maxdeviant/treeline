@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 
 const RiotAPI = require('controllers/riot')(config.riot.base_url, config.riot.api_key);
 
-RiotAPI.Leagues.getChallenger3v3Teams().then((teams) => {
+RiotAPI.Summoner.getOneByName('maxdeviant').then((teams) => {
     console.log(teams)
 }).catch((err) => {
     console.log(err);
