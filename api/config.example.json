@@ -1,0 +1,10 @@
+{
+    "token_secret": "TOKEN_SECRET",
+    "db": {
+        "host": "HOST",
+        "dialect": "DIALECT",
+        "database": "DATABASE",
+        "username": "USERNAME",
+        "password": "PASSWORD"
+    }
+}

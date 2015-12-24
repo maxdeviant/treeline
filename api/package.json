@@ -15,5 +15,17 @@
   "bugs": {
     "url": "https://github.com/maxdeviant/treeline/issues"
   },
-  "homepage": "https://github.com/maxdeviant/treeline#readme"
+  "homepage": "https://github.com/maxdeviant/treeline#readme",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "morgan": "^1.6.1",
+    "pg": "^4.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.15.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.4"
+  }
 }
