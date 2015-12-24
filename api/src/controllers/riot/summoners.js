@@ -31,8 +31,19 @@ class RiotSummonersAPI extends RiotAPI {
 
             url = url.replace('{summonerNames}', summonerNames.join(','));
 
-            this.makeGetRequest(url).then((summoner) => {
-                return resolve(summoner);
+            this.makeGetRequest(url).then((data) => {
+                let summoners = [];
+
+                for (let i in data) {
+                    summoners.push({
+                        id: data[i].id,
+                        name: data[i].name,
+                        level: data[i].summonerLevel,
+                        last_seen: new Date(data[i].revisionDate)
+                    });
+                }
+
+                return resolve(summoners);
             }).catch((err) => {
                 return reject(err);
             });

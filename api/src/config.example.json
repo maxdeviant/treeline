@@ -1,6 +1,6 @@
 {
     "token_secret": "TOKEN_SECRET",
-    "db": {
+    "postgres": {
         "host": "HOST",
         "dialect": "DIALECT",
         "database": "DATABASE",
