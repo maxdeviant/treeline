@@ -2,7 +2,7 @@
 
 const Sequelize = require('sequelize');
 
-const config = require('../config');
+const config = require('config');
 const db = config.postgres;
 
 const sequelize = new Sequelize(db.database, db.username, db.password, {
