@@ -23,6 +23,14 @@ app.use((req, res, next) => {
     next();
 });
 
+const RiotAPI = require('controllers/riot')(config.riot.base_url, config.riot.api_key);
+
+RiotAPI.Leagues.getChallenger3v3Teams().then((teams) => {
+    console.log(teams)
+}).catch((err) => {
+    console.log(err);
+});
+
 app.use('/', require('routes/health'));
 
 app.set('host', process.env.HOST || '0.0.0.0');
