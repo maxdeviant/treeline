@@ -5,8 +5,11 @@ const request = require('request');
 
 class RiotAPI {
 
-    constructor(baseUrl, apiKey) {
-        this.baseUrl = baseUrl;
+    constructor(baseUrl, region, version, apiKey) {
+        this.baseUrl = baseUrl
+            .replace('{region}', region)
+            .replace('{version}', version.replace(/[^0-9\.]/, ''));
+
         this.apiKey = apiKey;
     }
 
@@ -26,7 +29,7 @@ class RiotAPI {
                     });
                 }
 
-                return resolve(body);
+                return resolve(JSON.parse(body));
             });
         });
     }

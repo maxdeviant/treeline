@@ -6,8 +6,10 @@ class RiotLeaguesAPI extends RiotAPI {
 
     getChallenger3v3Teams() {
         return new Promise((resolve, reject) => {
-            this.makeGetRequest('/league/challenger?type=RANKED_TEAM_3x3').then((response) => {
-                console.log(response)
+            this.makeGetRequest('/league/challenger?type=RANKED_TEAM_3x3').then((teams) => {
+                return resolve(teams);
+            }).catch((err) => {
+                return reject(err);
             });
         });
     }
