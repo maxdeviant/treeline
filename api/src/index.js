@@ -25,8 +25,10 @@ app.use((req, res, next) => {
 
 const RiotAPI = require('controllers/riot')(config.riot.base_url, config.riot.api_key);
 
-RiotAPI.Summoner.getOneByName('maxdeviant').then((teams) => {
-    console.log(teams)
+RiotAPI.Summoners.getOneByName('maxdeviant').then((summoner) => {
+    console.log(summoner)
+
+    // return RiotAPI.Teams.
 }).catch((err) => {
     console.log(err);
 });

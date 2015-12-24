@@ -2,7 +2,7 @@
 
 const RiotAPI = require('controllers/riot/api');
 
-class RiotSummonerAPI extends RiotAPI {
+class RiotSummonersAPI extends RiotAPI {
 
     getOneByName(summonerName) {
         return new Promise((resolve, reject) => {
@@ -41,4 +41,4 @@ class RiotSummonerAPI extends RiotAPI {
 
 }
 
-module.exports = RiotSummonerAPI;
+module.exports = RiotSummonersAPI;
